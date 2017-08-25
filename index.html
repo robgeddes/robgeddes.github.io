@@ -1,64 +1,322 @@
 <!DOCTYPE html>
-<html lang="zxx">
-    <head>
-        <meta charset="utf-8">
-        <title>Rob Geddes</title>
-        <link rel="stylesheet" href="styles/main.css">
-        <script src="scripts/jquery-3.2.1.min.js"></script>
-    </head>
-    <body>
-        <header>
-            <a href="index.html"><img src="images/bones.png" alt="Logo - Skull and Crossed Drones"></a>
-            <h1>Sample Page Showing Two Column Format</h1>
-            <h2>Chapter 6 - Murach's</h2>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="#">Motorcycles</a></li>
-                <li><a href="#">Music</a></li>
-                <li><a href="#">Baking</a></li>
-                <li><a href="#">Electronics</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- standard font android and chrome -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            color: #777;
+            background-color: #eee;
+            padding-top: 50px; /* Needed for fixed navbar */
+        }
+
+        #main {
+            background-color: white;
+            padding-bottom: 2em;
+        }
+
+        #navbar {
+            box-shadow: 0 -5px 10px 5px #333;
+        }
+
+        .sidenav {
+            padding-top: 10px;
+        }
+
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="navbar" class="navbar navbar-inverse navbar-fixed-top navbar=static=top">
+        <nav class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Website Name</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <!-- Search form -->
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="input-group">
+                        <input id="search" type="text" class="form-control" name="search" placeholder="Search">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+                <!-- /Search Form -->
+            </div>
         </nav>
-        <main>
-			<section>
-				<h2>Welcome to my site. Please come in and stay awhile.</h2>
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-			</section>
-			<section>
-				<h2>Harley Davidson Sportster 48 Custom</h2>
-				<figure class="inline inline-left">
-					<img src="images/48.png" alt="2012 HD Sportster 48 Custom">
-					<figcaption>2012 HD Sportster 48 Custom</figcaption>
-				</figure>
-				<p>
-				Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-				<h2>Vespa PX80E</h2>
-				<figure class="inline inline-right">
-					<img src="images/vespa.png" alt="1992 Vespa PX80E in black">
-					<figcaption>1992 Vespa PX80E in black</figcaption>
-				</figure>
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-			</section>
-        </main>
-        <footer>
-            <p>&copy; 2017 Robert Geddes</p>
-        </footer>
-    </body>
+    </div>
+
+    <div class="container-fluid text-center">
+        <div class="row content">
+            <nav class="col-sm-2 sidenav">
+                <!--
+                <ul class="nav">
+                    <li><a href="#">Menu 1</a></li>
+                    <li><a href="#">Menu 2</a></li>
+                    <li><a href="#">Menu 3</a></li>
+                </ul>
+                -->
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#">Menu 0</a></li>
+                    <li><a href="#">Menu 1</a></li>
+                    <li><a href="#">Menu 2</a></li>
+                    <li><a href="#">Menu 3</a></li>
+                </ul>
+            </nav>
+            <main id="main" class="col-sm-8 text-left">
+                &nbsp;<h1 class="page-header">Welcome</h1>
+                <p>Image floats don't work work well in mobile first design. The screen is generally split into columns which stack on smaller screens.
+                </p>
+                <p>
+                Aligning elements left to right can be done using the inline-block property. If using Bootstrap, it is accomlished using appropriate class modifiers.
+                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                <!-- Table -->
+                <table class="table table-hover table-condensed table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Mary</td>
+                            <td>Moe</td>
+                            <td>mary@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>July</td>
+                            <td>Dooley</td>
+                            <td>july@example.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- /Table -->
+
+                <!-- Tab Content -->
+                <ul class="nav nav-tabs blog">
+                    <li class="active"><a data-toggle="tab" href="#home">Tab One</a></li>
+                    <li><a data-toggle="tab" href="#menu1">Tab Two</a></li>
+                    <li><a data-toggle="tab" href="#menu2">Tab Three</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="home" class="tab-pane fade in active">
+                        <h4>Tab One Content</h4>
+                        <p>Hinc sensibus eos eu. Et wisi aliquid antiopam ius, congue molestiae eam an. Equidem salutandi eos ne. At usu autem choro, vix ubique ornatus tibique ut. Enim paulo ut pri, eum id natum exerci apeirian, latine molestiae no vim.</p>
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+                        <h4>Tab Two Content</h4>
+                        <p>Lorem ipsum dolor sit amet, et ius quas augue, eum labore viderer ei, eu ignota aperiri scriptorem est. Mel eu ignota iriure dissentiet, in mel natum detracto. Vitae percipit pericula ad vis. Duo in purto porro volumus, pri ne labitur aliquid maluisset, hinc magna delectus no qui. Consul liberavisse ut qui, vero accusata in nec, odio mnesarchum eos ea.
+                        </p>
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+                        <h4>Tab Three Content</h4>
+                        <p>Nec praesent ullamcorper donec vivamus dui, elementum sit vel, ullamcorper pede a tellus eget ultricies diam, mauris malesuada dui rerum. Eu dictumst tortor integer blandit mollis, vivamus quis, pellentesque tellus, ac et libero, pulvinar venenatis ligula. Ipsum metus erat metus fringilla curabitur eget, integer eget in fermentum. Porttitor libero justo, lacus suscipit duis integer quis elit, ac nibh convallis ante cras quisque, congue sem, hendrerit libero tristique cumque quam ante aliquam. Sociosqu pellentesque, id mollis enim dui vivamus. Sed nec integer sapien vestibulum et lectus, vivamus nonummy ullamcorper at dolor hendrerit, est libero, dignissim nec sit viverra taciti.</p>
+                    </div>
+                </div>
+                <!-- /Tab Content -->
+
+                <!-- Panel -->
+                <div class="row slideanim">
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3>Basic Panel</h3>
+                            </div>
+                            <div class="panel-body">
+                                <p><strong>20</strong> Lorem</p>
+                                <p><strong>15</strong> Ipsum</p>
+                                <p><strong>5</strong> Dolor</p>
+                                <p><strong>2</strong> Sit</p>
+                                <p><strong>Endless</strong> Amet</p>
+                            </div>
+                            <div class="panel-footer">
+                                <strong>$19</strong>
+                                <p>Per Month</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Panel -->
+
+                <!-- Accordion -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Accordion - Collapsible Panel</a>
+                        </h4>
+                    </div>
+                    <div id="collapse3" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Accordion -->
+
+                <!-- Image Carousel -->
+                <h2>Image Carousel</h2>
+                <p>Lorem ipsum...</p>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <figure class="item active">
+                            <img src="images/la.jpg" alt="Los Angeles">
+                            <figurecaption class="carousel-caption">
+                                <h3>Los Angeles</h3>
+                                <p>LA is always so much fun!</p>
+                            </figurecaption>
+                        </figure>
+                        <figure class="item">
+                            <img src="images/chicago.jpg" alt="Chicago">
+                            <figcaption class="carousel-caption">
+                                <h3>Chicago</h3>
+                                <p>Thank you, Chicago!</p>
+                            </figcaption>
+                        </figure>
+                        <figure class="item">
+                            <img src="images/ny.jpg" alt="New York">
+                            <figcaption class="carousel-caption">
+                                <h3>New York</h3>
+                                <p>We love the Big Apple!</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <!-- /Image Carousel -->
+
+                <!-- Modal Contact Form -->
+                <h2 class="page-header">Contact Us</h2>
+                <p><span class="glyphicon glyphicon-map-marker"></span> Kitchener, ON</p>
+                <p><span class="glyphicon glyphicon-phone"></span> Phone: (519) xxx-xxxx</p>
+                <p><span class="glyphicon glyphicon-envelope"></span> Email: xxxxxx@conestogac.on.ca</p>
+
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Contact Form</button>
+
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Contact Form</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-sm-6 form-group">
+                                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                                    </div>
+                                    <div class="col-sm-6 form-group">
+                                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                                    </div>
+                                </div>
+                                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <button class="btn pull-right" type="submit" data-dismiss="modal">Send</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Contact Form -->
+
+            </main>
+
+            <!-- Right Side Column -->
+            <aside class="col-sm-2 sidenav">
+                <figure class="thumbnail">
+                    <img src="images/img_avatar.png" alt="Avatar" class="img-thumbnail img-responsive">
+                    <figcaption class="caption small">
+                        <strong>John Doe</strong>
+                        <p>Architect &amp; Engineer</p>
+                    </figcaption>
+                </figure>
+                <figure class="thumbnail">
+                    <img src="images/spiderwort.jpg" alt="Purple Spiderwort" class="img-thumbnail img-responsive">
+                    <figcaption class="caption small">
+                        <strong>Purple Spiderwort</strong>
+                        <p>Guelph Arboretum - July 20, 2017</p>
+                        <p>&copy; James McGarry</p>
+                    </figcaption>
+                </figure>
+                <figure class="thumbnail">
+                    <img src="images/daylily.jpg" alt="Bug's Hug Daylily" class="img-thumbnail img-responsive">
+                    <figcaption class="caption small">
+                        <strong>&quot;Bug&apos;s Hug&quot; Daylily</strong>
+                        <p>Guelph Arboretum - July 20, 2017</p>
+                        <p>&copy; James McGarry</p>
+                    </figcaption>
+                </figure>
+            </aside>
+            <!-- /Right Side Column -->
+
+        </div>
+    </div>
+
+    <footer class="container-fluid text-center small">
+        <p>Footer Text</p>
+    </footer>
+
+</body>
+
 </html>
